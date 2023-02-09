@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <title>test task q2</title>
+</head>
+
+<body>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">RSS feeds</h1>
+        <p class="lead text-muted">Click to load feed</p>
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary tab-option" data-url="https://feeds.bbci.co.uk/news/rss.xml">BBC News</a>
+          <a href="#" class="btn btn-outline-secondary tab-option"
+            data-url="https://www.buzzfeed.com/uk/index.xml">Buzzfeed</a>
+          <a href="#" class="btn btn-outline-secondary tab-option" data-url="https://fliplet.com/feed">Fliplet</a>
+          <a href="#" class="btn btn-outline-secondary tab-option" data-url="https://www.ft.com/news-feed">FT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Loading state UI -->
+    <div class="alert alert-secondary visually-hidden" id="loading">Loading...</div>
+
+    <!-- Error state UI -->
+    <div class="alert alert-danger visually-hidden" id="error-prompt">
+      <h5>Unable to load feed</h5>
+      <!-- Show error message, if applicable -->
+      Feed could not be converted, probably not a valid RSS feed.<br>
+      <small><a href="#">Open feed in a new tab</a></small>
+    </div>
+
+    <!-- Feed (Show no more than 5 posts per page) -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="feed-inner">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <nav>
+        <ul class="pagination">
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <script src="./index.js"></script>
+</body>
+
+</html>
